@@ -1,0 +1,232 @@
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  height: calc(220px + 72px + 72px);
+  width: 512px;
+  border-radius: 3rem;
+  padding: 1rem;
+}
+
+header h1 {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#clear-content {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clear-content:hover,
+#clear-content:focus {
+  background-color: #f5f5f5;
+}
+
+section h4 {
+  color: #737373;
+  font-size: 16px;
+}
+
+button {
+  align-items: center;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: rgb(26, 115, 232);
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-weight: 600;
+  height: 32px;
+  justify-content: center;
+  min-width: 5.14em;
+  outline-width: 0;
+  padding: 8px 16px;
+  position: relative;
+  user-select: none;
+  background-color: transparent;
+}
+
+
+footer button:first-child {
+  background-color: rgb(26, 115, 232);
+  color: #fff;
+}
+
+button + button {
+  margin-left: 0.5rem;
+}
+
+.text {
+  border-radius: 3px;
+  background-color: #f1f3f4;
+  height: 220px;
+  width: 100%;
+  padding: 6px;
+  overflow: auto;
+  outline: none;
+  margin: 0.7rem auto;
+  border: 2px solid #f1f3f4;
+  transition: border 0.2s ease-in-out;
+}
+
+.text:focus,
+.text:hover {
+  outline: none;
+  border: 2px solid rgb(26, 115, 232);
+}
+
+footer {
+  height: 72px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+/*TOAST*/
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 3rem; /* Rounded borders */
+  padding: 7px 15px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

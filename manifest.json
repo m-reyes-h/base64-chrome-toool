@@ -1,0 +1,20 @@
+{
+  "name": "## **Component Hierarchy** and decode tool",
+  "version": "1.0",
+  "description": "Simple base 64 encode and decode tool",
+  "manifest_version": 2,
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon":  {
+      "128": "images/icon128.png",
+      "48": "images/icon48.png",
+      "16": "images/icon16.png"
+    }
+  },
+  "icons": {
+    "128": "images/icon128.png",
+    "48": "images/icon48.png",
+    "16": "images/icon16.png"
+  }
+}

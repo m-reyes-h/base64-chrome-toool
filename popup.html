@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Basic base 64 converter tool" />
+    <meta
+      name="keywords"
+      content="base64,base 64,64 tool,tool, converter,URL"
+    />
+    <meta name="author" content="Michel Reyes" />
+    <title>Base 64 Tool</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Base 64 Tool</h1>
+      </header>
+      <section>
+        <div class="subheader">
+          <h4>Text to Encode or Decode</h4>
+          <i class="icon pointer" id="clear-content" title="Clear content">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path fill="none" d="M0 0h24v24H0V0z" />
+              <path
+                fill="#202124"
+                d="M5 13h14v-2H5v2zm-2 4h14v-2H3v2zM7 7v2h14V7H7z"
+              />
+            </svg>
+          </i>
+        </div>
+        <div class="text" id="text" contenteditable="true"></div>
+      </section>
+      <footer>
+        <div>
+          <button id="btn-encode">Encode</button>
+          <button id="btn-decode">Decode</button>
+          <button id="btn-copy">Copy</button>
+        </div>
+      </footer>
+
+      <div id="snackbar">Copied to clipboard!</div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
